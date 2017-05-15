@@ -13,4 +13,11 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
     }
+    
 }
+    class GamebasicSeeder extends Illuminate\Database\Seeder {
+        public function run(){
+            
+            
+        }
+    }

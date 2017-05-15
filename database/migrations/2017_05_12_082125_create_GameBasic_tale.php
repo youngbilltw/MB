@@ -13,7 +13,7 @@ class CreateGameBasicTale extends Migration
      */
     public function up()
     {
-        Schema::create('gameBasic', function(Blueprint $table){
+        Schema::create('games', function(Blueprint $table){
             $table->increments('sn');
             $table->datetime('sdate');
             $table->datetime('edate');
@@ -32,6 +32,6 @@ class CreateGameBasicTale extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gameBasic');
+        Schema::dropIfExists('games');
     }
 }

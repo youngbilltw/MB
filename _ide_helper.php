@@ -13319,3 +13319,4 @@ namespace {
     class Eloquent extends \Illuminate\Database\Eloquent\Model {}
     
 }
+

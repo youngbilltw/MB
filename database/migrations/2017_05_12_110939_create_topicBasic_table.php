@@ -13,7 +13,7 @@ class CreateTopicBasicTable extends Migration
      */
     public function up()
     {
-        Schema::create('topicBasic', function(Blueprint $table ){
+        Schema::create('Topics', function(Blueprint $table ){
             $table->increments('sn');
             $table->integer('gameSn')->unsigned();
             $table->double('totalmoney');
@@ -21,12 +21,12 @@ class CreateTopicBasicTable extends Migration
             $table->timestamps();
         });
         
-        Schema::table('topicBasic', function (Blueprint $table) {
+        Schema::table('Topics', function (Blueprint $table) {
 
             $table->foreign('gameSn')
-                ->references('sn')->on('gameBasic');
+                ->references('sn')->on('Games');
             $table->foreign('unitSn')
-                ->references('sn')->on('cfgUnit');
+                ->references('sn')->on('Units');
         });
         
     }
@@ -38,6 +38,6 @@ class CreateTopicBasicTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('topicbasic');
+        Schema::dropIfExists('Topics');
     }
 }

@@ -13,7 +13,7 @@ class CreateCfgUnitTable extends Migration
      */
     public function up()
     {
-        Schema::create('cfgUnit', function(Blueprint $table ){
+        Schema::create('Units', function(Blueprint $table ){
             $table->increments('sn');
             $table->string('name');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateCfgUnitTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cfgunit');
+        Schema::dropIfExists('Units');
     }
 }
